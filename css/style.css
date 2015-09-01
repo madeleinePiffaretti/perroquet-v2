@@ -73,7 +73,7 @@
 }
 
 .color.blue.transparent {
-	background: RGBA(57, 91, 204, 1);
+	background: RGBA(91, 194, 206, 1);
 	color: #fff;
 }
 
@@ -82,7 +82,7 @@
 }
 
 .color.blue.transparent h2 span{
-	background: RGBA(57, 91, 204, 1);
+	background: RGBA(91, 194, 206, 1);
 }
 
 
@@ -116,6 +116,7 @@
 
 .color.green {
 	background: #6CDDC3;
+	background-image: url('../img/background/perro_cul.png');
 	color: #414141;
 }
 
