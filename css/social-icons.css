@@ -93,11 +93,12 @@
 .social-bookmarks {
 	padding: 0!important;
 	margin: 0!important;
-	list-style-type: none!important;
+	width: 100%;
+	text-align: center;
 }
 
 .social-bookmarks li{
-	float: left!important;
+	display:inline-block;
 	padding: 0px!important;
 	display: inline!important;
 	width: auto!important;
@@ -116,8 +117,7 @@
 	-o-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
-	display: block!important;
-	float: left!important;
+	display: inline-block!important;
 	height: 100%!important;
 	margin: 1px!important;
 	padding: 0!important;

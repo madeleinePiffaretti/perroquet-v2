@@ -59,18 +59,23 @@
 }
 
 
+.montains {
+	background: #5bc2ce;
+	background-image: url('../img/background/montains.jpeg');
+	background-size: cover;
+	color: #414141;
+}
+
 .color.blue {
 	background: #5bc2ce;
-	color: #fff;
+	background-image: url('../img/background/perro_0_trans.png');
+	color: #414141;
 }
 
 .color.blue i {
 	color: #5bc2ce;
 }
 
-.color.blue h2 span{
-	background: #5bc2ce;
-}
 
 .color.blue.transparent {
 	background: RGBA(91, 194, 206, 1);
@@ -110,9 +115,6 @@
 	color: #ffeb41;
 }
 
-.color.yellow h2 span {
-	background: #F5EA52;
-}
 
 .color.green {
 	background: #6CDDC3;
@@ -124,9 +126,6 @@
 	color: #6CDDC3;
 }
 
-.color.green h2 span {
-	background: #6CDDC3;
-}
 
 .color.pink {
 	background: #B45280;
@@ -140,8 +139,6 @@
 .color.pink h2 span {
 	background: #B45280;
 }
-
-
 
 
 body {
@@ -972,6 +969,16 @@ html[xmlns] .slides {display: block;}
 	margin-bottom: 15px;
 }
 
+.img-contributeur{
+	padding: 10px;
+    border-radius: 50%;
+}
+
+.max-h {
+	max-height: 600px;
+	overflow: auto;
+}
+
 /* Shortcodes
 ====================================================================== */
 
@@ -1546,6 +1553,11 @@ ol li ol.childlist .comment-des {
 
 .form-spacer {margin-top: 20px;}
 
+/* Numeros 
+=================================================================== */
+#num {
+	padding: 0px 0;
+}
 
 /* Pricing Tables
 =================================================================== */
@@ -1669,6 +1681,13 @@ a.buy:hover {
 
 /* Google Map
 =================================================================== */
+
+.simple-list ul{
+	list-style: inherit;
+}
+.simple-list li{
+	padding-top: 1em;
+}
 
 #mapBg {
 	height: 620px;
