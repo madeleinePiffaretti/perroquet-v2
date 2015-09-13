@@ -41,7 +41,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
-<body>
+<body onload="initializeMaps()">
 	
 	<!--start: Header -->
 	<header>
@@ -162,25 +162,59 @@
 			
 			<!-- start: Row -->
       		<div class="row-fluid">
-      			<div class="span2" id="num">
-					<p>#0/#1</p>
+      			<div class="span2" id="num">			
+					<div class="row" id="num0">
+						<a href="#num" onclick="switch_div('list-num0','list-num1','num0_link','num1_link')">
+							<h2 id="num0_link" style="color : black">#0</h2>
+						</a>
+					</div>
+					<div class="row" id="num_separator"></div>
+					<div class="row" id="num1">
+						<a href="#num" onclick="switch_div('list-num1','list-num0','num1_link','num0_link')">
+							<h2 id="num1_link">#1</h2>
+						</a>
+					</div>
 				</div>	
-      			<div class="span5 list-item" id='list'>
+      			<div class="span5 list-item" id='list-num0' style="padding-bottom:2em;">
 					<ul>
-                <li class='item-writer'><a href='#av1'>Magali Brénon</a></li> 
-                <li class='item-reader'><a href='#av2'>Astrid Campion</a></li>
-                <li class='item-writer'><a href='#'>Sarah Cillaire</a></li> 
-                <li class='item-drawer'><a href='#'>Laurent Colomb</a></li>
-                <li class='item-writer'><a href='#'>Michel Fadat</a></li>
-                <li class='item-reader'><a href='#'>Giorgio</a></li>
-                <li class='item-reader'><a href='#'>Joseph Harara</a></li>
-                <li class='item-writer'><a href='#'>Daniel Martin-Borret</a></li>
-                <li class='item-writer'><a href='#'>Sébastien Porte</a></li> 
-                <li class='item-drawer'><a href='#'>Jean Renoux</a></li>
-                <li class='item-drawer'><a href='#'>Noëlle Renaude</a></li>
-                <li class='item-writer'><a href='#'>Bastien Simon</a></li>
-                <li class='item-reader'><a href='#'>Vincent Zuanela</a></li>
-              </ul>
+						<li class='item-drawer'><a href='#'>Guillaume Chauchat</a></li>
+						<li class='item-writer'><a href='#'>Astrid Campion</a></li>
+						<li class='item-reader'><a href='#'>Camille Blanès</a></li>
+						<li class='item-drawer'><a href='#'>Jérémie Fischer</a></li>
+						<li class='item-writer'><a href='#'>Michel Fadat</a></li>
+						<li class='item-reader'><a href='#'>Daniel Martin-Borret</a></li>
+						<li class='item-drawer'><a href='#'>Marion Fayolle</a></li>
+						<li class='item-drawer'><a href='#'>Vincent Broquaire</a></li>
+						<li class='item-writer'><a href='#'>Joseph Harara</a></li>
+						<li class='item-drawer'><a href='#'>Alexis Beauclair</a></li>
+						<li class='item-writer'><a href='#'>Jean Renoux</a></li>
+						<li class='item-reader'><a href='#'>Zoé Manhès</a></li>
+						<li class='item-drawer'><a href='#'>Mügluck</a></li>
+						<li class='item-writer'><a href='#'>Georgio</a></li>
+						<li class='item-reader'><a href='#'>Elisa Monteil</a></li>
+						<li class='item-writer'><a href='#'>Vincent Zuanella</a></li>
+						<li class='item-reader'><a href='#'>Mathieu Agulhon</a></li>
+						<li class='item-writer'><a href='#'>Bastien Simon</a></li>
+						<li class='item-reader'><a href='#'>Elodie Fiat</a></li>
+              		</ul>
+				</div>	
+				<div class="span5 list-item" id='list-num1' style="display: none; padding-bottom:2em;">
+					<ul>
+						<li class='item-drawer'><a href='#'>Pauline Barzilai</a></li> 
+						<li class='item-writer'><a href='#'>Magali Brénon</a></li> 
+						<li class='item-picture'><a href='#'>Nicolas Tourre</a></li> 
+						<li class='item-writer'><a href='#'>Michel Fadat</a></li> 
+						<li class='item-writer'><a href='#'>Laurent Colomb</a></li> 
+						<li class='item-picture'><a href='#'>Marie Vermillard</a></li> 
+						<li class='item-writer'><a href='#'>Noëlle Renaude</a></li> 
+						<li class='item-writer'><a href='#'>Barbara Métais-Chastanier</a></li>
+						<li class='item-reader'><a href='#'>Nicolas Maury</a></li> 
+						<li class='item-writer'><a href='#'>Sarah Cillaire</a></li> 
+						<li class='item-picture'><a href='#'>Christine Beau</a></li> 
+						<li class='item-writer'><a href='#'>Daniel Martin-Borret</a></li> 
+						<li class='item-drawer'><a href='#'>Anne-Lise Bertrand</a></li> 
+						<li class='item-writer'><a href='#'>Sébastien Porte</a></li> 
+              		</ul>
 				</div>	
 				<div class="span5">
 					<img src="img/numeros/n1/couverture.jpg">
@@ -220,14 +254,6 @@
 				</div>	
 
 			</div>
-
-			<!-- end: Page Title -->
-			<div class="row-fluid">
-	
-			<div class ="span12">
-				
-				<!-- start: Team -->	
-			<div id="team">
 						
 			<!-- start: Row -->
 			<div class="row-fluid">
@@ -345,9 +371,6 @@
 		</div>
 		<!--end: Container -->
 		
-	</div>
-</div>
-</div>
 	<!-- end: 3rd Page - Pricing Tables -->
 	
 	<!-- start: 4th Page - Portfolio -->
@@ -477,8 +500,7 @@
 		<!-- start: Team -->	
 		<div id="team">			
 			<!-- start: Row -->
-			<div class="row-fluid">
-				
+			<div class="row-fluid" style="padding-bottom:2em;">
 				<!-- start: List points de ventes -->
 				<div class="span5">
 					<h3>France</h3>
@@ -495,107 +517,30 @@
 				<!-- end: About Member -->
 
 				<!-- start: Map -->
-				<div class="span7">
-
-					
+				<div class="span7" style="padding-top:1em;">
 					<!-- starts: Google Maps -->
-					<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-					<div id="googlemaps">
-						<div id="map" class="google-map google-map-full"></div>
-					</div>
-					<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-					<script src="js/jquery.gmap.min.js"></script>
-					<script type="text/javascript">
-						$('#map').gMap({
-							controls: {
-								panControl: false,
-								zoomControl: false,
-								mapTypeControl: false,
-								scaleControl: false,
-								streetViewControl: false,
-								overviewMapControl: false
-							},
-							maptype: 'ROADMAP',
-							scrollwheel: true,
-							zoom: 12,
-
-							markers: [
-								{
-									address: '61 rue de Bagnolet, Paris, France', // Your Adress Here
-									html: '',
-									popup: false,
-								},
-								{
-									address: '51 rue de Bagnolet, Paris, France', // Your Adress Here
-									html: '',
-									popup: false,
-								},
-								{
-									address: '67 rue des Martyrs, Paris, France', // Your Adress Here
-									html: '',
-									popup: false,
-								},
-								{
-									address: '36 rue René Boulanger, Paris, France', // Your Adress Here
-									html: '',
-									popup: false,
-								},
-								{
-									address: '32 rue des vinaigriers, Paris, France', // Your Adress Here
-									html: '',
-									popup: false,
-								}
-
-							],
-
-						});
-						
-						$('#mapBg').gMap({
-							controls: {
-								panControl: false,
-								zoomControl: false,
-								mapTypeControl: false,
-								scaleControl: false,
-								streetViewControl: false,
-								overviewMapControl: false
-							},
-							maptype: 'ROADMAP',
-							scrollwheel: true,
-							zoom: 8,
-							markers: [
-								{
-									address: '61 rue de Bagnolet, Paris, France', // Your Adress Here
-									html: '',
-									popup: false,
-								},
-								{
-									address: '51 rue de Bagnolet, Paris, France', // Your Adress Here
-									html: '',
-									popup: false,
-								},
-								{
-									address: '67 rue des Martyrs, Paris, France', // Your Adress Here
-									html: '',
-									popup: false,
-								},
-								{
-									address: '36 rue René Boulanger, Paris, France', // Your Adress Here
-									html: '',
-									popup: false,
-								},
-								{
-									address: '32 rue des vinaigriers, Paris, France', // Your Adress Here
-									html: '',
-									popup: false,
-								}
-
-							],
-
-						});
-						
-					</script>
-					<!-- end: Google Maps -->
+					<div id="mapF" class="google-map google-map-full"></div>
+					<!-- end: Google Maps -->				
+				</div>		
+			</div>
+			<!-- end: Row -->
+			<div class="row-fluid" style="padding-bottom:2em;">
 				
+				<!-- start: List points de ventes -->
+				<div class="span5">
+					<h3>Belgique</h3>
+					<div class="simple-list">
+					<ul>
+						<li>Peinture Fraîche - 10 rue du Tabellion, Bruxelles</li>
+						<li>Ptyx - 39 rue lesbroussart, Bruxelles</li>
+					</ul>
+					</div>
+				</div>
+				<!-- end: About Member -->
+
+				<!-- start: Map -->
+				<div class="span7" style="padding-top:1em;">
+					<div id="mapB" class="google-map google-map-full"></div>
 				</div>		
 			</div>
 			<!-- end: Row -->
@@ -841,6 +786,87 @@
 
         }());
 </script>
+<!-- Pour la liste des contributeurs-->
+<script type="text/javascript">
+	    	function switch_div(active_elem,disable_elem,active_link,disable_link) {
+	    		document.getElementById(disable_elem).style.display = 'none';
+	    		document.getElementById(active_elem).style.display = 'block';
+	    		document.getElementById(disable_link).style.color = '#E0E0E0'
+	    		document.getElementById(active_link).style.color = 'black';
+			}
+		</script>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false">
+				</script>
+		<script type="text/javascript">
+		function initializeMaps()
+		{
+		    var paris = new google.maps.LatLng(48.8566140, 2.3522219);
+		    var bruxelles = new google.maps.LatLng(50.8503396,4.3517103);
+
+		    <!-- paris -->
+		    var lib_equipage = new google.maps.LatLng(48.8576036,2.3986112);
+		    var lib_merle = new google.maps.LatLng(48.8570953,2.3979079);
+		    var lib_vendredi = new google.maps.LatLng(48.8818026,2.3394184);
+		    var lib_livres = new google.maps.LatLng(48.8684255,2.3613778);
+		    var lib_philippe = new google.maps.LatLng(48.8733558,2.3624141);
+
+		    <!-- bruxelles -->
+		    var lib_peinture = new google.maps.LatLng(50.8247328,4.3585909);
+		    var lib_ptyx = new google.maps.LatLng(50.8278712,4.3693618);
+
+		    var options_paris =
+		    {
+		        zoom: 12,
+		        center: paris,
+		        mapTypeId: google.maps.MapTypeId.ROADMAP
+		    };
+
+		    var options_bruxelles =
+		    {
+		        zoom: 12,
+		        center: bruxelles,
+		        mapTypeId: google.maps.MapTypeId.ROADMAP
+		    };
+
+		    var map = new google.maps.Map(document.getElementById("mapF"), options_paris,marker_paris);
+		    
+		    var map2 = new google.maps.Map(document.getElementById("mapB"), options_bruxelles,marker_bruxelles);
+
+		    var marker_paris = [new google.maps.Marker(
+		    {
+		        position: lib_equipage,
+		        map: map
+		   }),new google.maps.Marker(
+		    {
+		        position: lib_merle,
+		        map: map
+		   }),new google.maps.Marker(
+		    {
+		        position: lib_vendredi,
+		        map: map
+		   }),new google.maps.Marker(
+		    {
+		        position: lib_livres,
+		        map: map
+		   }),new google.maps.Marker(
+		    {
+		        position: lib_philippe,
+		        map: map
+		   })];
+
+		    var marker_bruxelles = [new google.maps.Marker(
+		    {
+		        position: lib_peinture,
+		        map: map2,
+		    }),
+		    new google.maps.Marker(
+		    {
+		        position: lib_ptyx,
+		        map: map2,
+		    })];
+		}
+		</script>
 <!-- end: Java Script -->
 
 </body>
