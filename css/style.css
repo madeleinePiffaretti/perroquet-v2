@@ -65,7 +65,7 @@
 
 .color.blue {
 	background: #5bc2ce;
-	background-image: url('../img/background/perro_0_trans.png');
+	background-image: url('../img/background/perro_b_w.png');
 	color: #414141;
 }
 
@@ -104,7 +104,7 @@
 
 .color.yellow {
 	background: #F5EA52;
-	background-image: url('../img/background/perro_b_w.png');
+	background-image: url('../img/background/n0_b_w.png');
 	color: #414141;
 }
 
@@ -1359,18 +1359,25 @@ input[type="button"] {
 =================================================================== */
 
 .list-icon {
-  margin-top: 4em;
   margin-left: 2em;
   text-align: left;
   padding-left: 2em;
   padding-bottom: 1em;
 }
 
+.list-icon a{
+	text-decoration: none;
+}
+
+.list-icon a:hover{
+	color: white !important;
+	background-color: black;
+}
+
 .list-icon ul li {
-  padding: 3px 0;
-  height:30px; 
-  line-height:32px;
-  font-size: 18px; 
+  height:25px; 
+  line-height:20px;
+  font-size: 14px; 
 }
 
 .item-writer {
@@ -1559,6 +1566,12 @@ ol li ol.childlist .comment-des {
 
 #num h2{
 	color : #E0E0E0;
+	display: inline
+}
+
+#num a:hover{
+	color: white !important;
+    background-color: black;
 }
 
 #num_separator{ 
@@ -1693,19 +1706,35 @@ a.buy:hover {
 =================================================================== */
 
 .simple-list ul{
-	list-style: inherit;
+	list-style-type: none
+
 }
 .simple-list li{
 	padding-top: 1em;
 }
 
+#home a{
+	text-decoration: none;
+}
+
+#home a:hover{
+	color:white;
+	background-color: black;
+}
 
 #contact {
 	position: relative;
 	z-index: 2;
 }
 
+#contact a{
+	text-decoration: none;
+}
 
+#contact a:hover{
+	color:white;
+	background-color: black;
+}
 
 #mapF {
 	height: 300px;

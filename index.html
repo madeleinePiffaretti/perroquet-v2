@@ -41,7 +41,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
-<body onload="initializeMaps()">
+<body onload="initializeMaps();setColorForNum0()">
 	
 	<!--start: Header -->
 	<header>
@@ -98,25 +98,26 @@
 
 					<div class="sl-slide bg-1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
 						<div class="sl-slide-inner" id="slide1">
-							<div class="deco" data-icon="P!"></div>
 							<h2>Perroquet !</h2>
-							<blockquote><p>You have just dined, and however scrupulously the slaughterhouse is concealed in the graceful distance of miles, there is complicity.</p><cite>Ralph Waldo Emerson</cite></blockquote>
+							<blockquote><p>Le livre rassure. La scène inquiète.</p></blockquote>
 						</div>
 					</div>
 
 					<div class="sl-slide bg-2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
 						<div class="sl-slide-inner">
-							<div class="deco" data-icon="L"></div>
-							<h2>À lire partout</h2>
-							<blockquote><p>Until he extends the circle of his compassion to all living things, man will not himself find peace.</p><cite>Albert Schweitzer</cite></blockquote>
+							<a href="https://www.facebook.com/events/480699525424614/">
+							<h2>Salon de la Revue</h2>
+							<blockquote><p>Venez nous rencontrer au Salon de la Revue du 9 au 11 octobre !</p></blockquote>
+							</a>
 						</div>
 					</div>
 
 					<div class="sl-slide bg-3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
 						<div class="sl-slide-inner">
-							<div class="deco" data-icon="A"></div>
-							<h2>Abonnez-vous</h2>
-							<blockquote><p>Recevez votre revue chez vous en vous abonnant!</p><</blockquote>
+							<a href="#about">
+							<h2>Appel à contribution</h2>
+							<blockquote><p>Prochain Thème: Dispersion</p></blockquote>
+						</a>
 						</div>
 					</div>
 				</div><!-- /sl-slider -->
@@ -164,61 +165,64 @@
       		<div class="row-fluid">
       			<div class="span2" id="num">			
 					<div class="row" id="num0">
-						<a href="#num" onclick="switch_div('list-num0','list-num1','num0_link','num1_link')">
-							<h2 id="num0_link" style="color : black">#0</h2>
+						<a href="#services" onclick="switch_div('list-num0','list-num1','num0_link','num1_link','couv0','couv1')">
+							<h2 id="num0_link">#0</h2>
 						</a>
 					</div>
 					<div class="row" id="num_separator"></div>
 					<div class="row" id="num1">
-						<a href="#num" onclick="switch_div('list-num1','list-num0','num1_link','num0_link')">
+						<a href="#services" onclick="switch_div('list-num1','list-num0','num1_link','num0_link','couv1','couv0')">
 							<h2 id="num1_link">#1</h2>
 						</a>
 					</div>
 				</div>	
-      			<div class="span5 list-item" id='list-num0' style="padding-bottom:2em;">
+      			<div class="span5 list-icon" id='list-num0' style="padding-bottom:2em;">
 					<ul>
-						<li class='item-drawer'><a href='#'>Guillaume Chauchat</a></li>
-						<li class='item-writer'><a href='#'>Astrid Campion</a></li>
-						<li class='item-reader'><a href='#'>Camille Blanès</a></li>
-						<li class='item-drawer'><a href='#'>Jérémie Fischer</a></li>
-						<li class='item-writer'><a href='#'>Michel Fadat</a></li>
-						<li class='item-reader'><a href='#'>Daniel Martin-Borret</a></li>
-						<li class='item-drawer'><a href='#'>Marion Fayolle</a></li>
-						<li class='item-drawer'><a href='#'>Vincent Broquaire</a></li>
-						<li class='item-writer'><a href='#'>Joseph Harara</a></li>
-						<li class='item-drawer'><a href='#'>Alexis Beauclair</a></li>
-						<li class='item-writer'><a href='#'>Jean Renoux</a></li>
-						<li class='item-reader'><a href='#'>Zoé Manhès</a></li>
-						<li class='item-drawer'><a href='#'>Mügluck</a></li>
-						<li class='item-writer'><a href='#'>Georgio</a></li>
-						<li class='item-reader'><a href='#'>Elisa Monteil</a></li>
-						<li class='item-writer'><a href='#'>Vincent Zuanella</a></li>
-						<li class='item-reader'><a href='#'>Mathieu Agulhon</a></li>
-						<li class='item-writer'><a href='#'>Bastien Simon</a></li>
-						<li class='item-reader'><a href='#'>Elodie Fiat</a></li>
+						<li><a href='#'>Guillaume Chauchat <sup>dessin</sup></a></li>
+						<li><a href='#'>Astrid Campion <sup>texte</sup></a></li>
+						<li><a href='#'>Camille Blanès <sup>son</sup></a></li>
+						<li><a href='#'>Jérémie Fischer <sup>dessin</sup></a></li>
+						<li><a href='#'>Michel Fadat <sup>texte</sup></a></li>
+						<li><a href='#'>Daniel Martin-Borret <sup>son</sup></a></li>
+						<li><a href='#'>Marion Fayolle <sup>dessin</sup></a></li>
+						<li><a href='#'>Vincent Broquaire <sup>dessin</sup></a></li>
+						<li><a href='#'>Joseph Harara <sup>texte</sup></a></li>
+						<li><a href='#'>Alexis Beauclair <sup>dessin</sup></a></li>
+						<li><a href='#'>Jean Renoux <sup>texte</sup></a></li>
+						<li><a href='#'>Zoé Manhès <sup>son</sup></a></li>
+						<li><a href='#'>Mügluck <sup>dessin</sup></a></li>
+						<li><a href='#'>Georgio <sup>texte</sup></a></li>
+						<li><a href='#'>Elisa Monteil <sup>son</sup></a></li>
+						<li><a href='#'>Vincent Zuanella <sup>texte</sup></a></li>
+						<li><a href='#'>Mathieu Agulhon <sup>son</sup></a></li>
+						<li><a href='#'>Bastien Simon <sup>texte</sup></a></li>
+						<li><a href='#'>Elodie Fiat <sup>son</sup></a></li>
               		</ul>
 				</div>	
-				<div class="span5 list-item" id='list-num1' style="display: none; padding-bottom:2em;">
+				<div class="span5 list-icon" id='list-num1' style="display: none; padding-bottom:2em;">
 					<ul>
-						<li class='item-drawer'><a href='#'>Pauline Barzilai</a></li> 
-						<li class='item-writer'><a href='#'>Magali Brénon</a></li> 
-						<li class='item-picture'><a href='#'>Nicolas Tourre</a></li> 
-						<li class='item-writer'><a href='#'>Michel Fadat</a></li> 
-						<li class='item-writer'><a href='#'>Laurent Colomb</a></li> 
-						<li class='item-picture'><a href='#'>Marie Vermillard</a></li> 
-						<li class='item-writer'><a href='#'>Noëlle Renaude</a></li> 
-						<li class='item-writer'><a href='#'>Barbara Métais-Chastanier</a></li>
-						<li class='item-reader'><a href='#'>Nicolas Maury</a></li> 
-						<li class='item-writer'><a href='#'>Sarah Cillaire</a></li> 
-						<li class='item-picture'><a href='#'>Christine Beau</a></li> 
-						<li class='item-writer'><a href='#'>Daniel Martin-Borret</a></li> 
-						<li class='item-drawer'><a href='#'>Anne-Lise Bertrand</a></li> 
-						<li class='item-writer'><a href='#'>Sébastien Porte</a></li> 
+						<li><a href='#'>Pauline Barzilai <sup>dessin</sup></a></li> 
+						<li><a href='#'>Magali Brénon <sup>texte</sup></a></li> 
+						<li><a href='#'>Nicolas Tourre <sup>image</sup></a></li> 
+						<li><a href='#'>Michel Fadat <sup>texte</sup></a></li> 
+						<li><a href='#'>Laurent Colomb <sup>texte</sup></a></li> 
+						<li><a href='#'>Marie Vermillard <sup>image</sup></a></li> 
+						<li><a href='#'>Noëlle Renaude <sup>texte</sup></a></li> 
+						<li><a href='#'>Barbara Métais-Chastanier <sup>texte</sup></a></li>
+						<li><a href='#'>Nicolas Maury <sup>son</sup></a></li> 
+						<li><a href='#'>Sarah Cillaire <sup>texte</sup></a></li> 
+						<li><a href='#'>Christine Beau <sup>image</sup></a></li> 
+						<li><a href='#'>Daniel Martin-Borret <sup>texte</sup></a></li> 
+						<li><a href='#'>Anne-Lise Bertrand <sup>dessin</sup></a></li> 
+						<li><a href='#'>Sébastien Porte <sup>texte</sup></a></li> 
               		</ul>
 				</div>	
-				<div class="span5">
+				<div class="span5" id="couv1" style="display: none;">
 					<img src="img/numeros/n1/couverture.jpg">
-				</div>	
+				</div>
+				<div class="span5" id="couv0">
+					<img src="img/numeros/n0/couverture.jpg">
+				</div>		
         	
 			
 			</div>
@@ -239,7 +243,7 @@
 	<div id="pricing" class="color green">
 		
 		<!--start: Container -->
-		<div class="container max-h">
+		<div class="container">
 
 			<!--start: Wrapper -->
 			<div class="wrapper span12">
@@ -254,7 +258,7 @@
 				</div>	
 
 			</div>
-						
+			<div class="max-h">			
 			<!-- start: Row -->
 			<div class="row-fluid">
 				
@@ -366,6 +370,7 @@
 			</div>
 			<!-- end: Table -->
 			</div>
+			</div>
 			<!-- end: Wrapper -->
 		
 		</div>
@@ -410,7 +415,7 @@
 	<!-- end: 4th Page - Portfolio -->
 	
 	<!-- start: 5th Page - About -->
-	<div id="about" class="color yellow perro">
+	<div id="about" class="color blue">
 		
 		<!--start: Container -->
 		<div class="container">
@@ -438,22 +443,26 @@
 					<!-- start: History -->
 					<div id="history">
 						<p>
-							<span class="dropcap">P</span><em><strong>erroquet !</strong> </em>est une revue littéraire, artistique et sonore, née d’un collectif d’éditeurs, chroniqueurs radio et graphistes ainsi que de nombreux invités de tous horizons. Cette nouvelle revue entend donner de la voix à la création contemporaine en proposant des textes inédits, à lire et à écouter. Cet objet littéraire est augmenté d’éléments graphiques à travers lesquels les artistes répondent à la thématique choisie ou aux propos des écrivains. Ainsi, le son, la voix, les images et les mots se complètent et se font volontairement écho, soulignant à quel point l’acte créatif peut être inlassablement répété, déconstruit, détourné.
+							<em><strong>Perroquet !</strong> </em>est une revue littéraire, artistique et sonore, née d’un collectif d’éditeurs, chroniqueurs radio et graphistes ainsi que de nombreux invités de tous horizons. Cette nouvelle revue entend donner de la voix à la création contemporaine en proposant des textes inédits, à lire et à écouter. Cet objet littéraire est augmenté d’éléments graphiques à travers lesquels les artistes répondent à la thématique choisie ou aux propos des écrivains. Ainsi, le son, la voix, les images et les mots se complètent et se font volontairement écho, soulignant à quel point l’acte créatif peut être inlassablement répété, déconstruit, détourné.
           					<br>
           					Chaque numéro de la revue est publié sur un double support : web et en format papier, disponible en librairie et sur abonnement.
 						</p>
 						<p>
-							<span class="dropcap color">P</span><em><strong>erroquet !</strong> </em>désire ouvrir une perspective nouvelle sur la littérature d’aujourd’hui et rendre compte d’une culture littéraire vivante et foisonnante, émancipée des codes et des succès de son temps. Une littérature qui inspire les artistes, une littérature qui s’écoute autant qu’elle se lit, qui se renouvelle et surprend.
+							<em><strong>Perroquet !</strong> </em>désire ouvrir une perspective nouvelle sur la littérature d’aujourd’hui et rendre compte d’une culture littéraire vivante et foisonnante, émancipée des codes et des succès de son temps. Une littérature qui inspire les artistes, une littérature qui s’écoute autant qu’elle se lit, qui se renouvelle et surprend.
          					<br>
           					Si vous souhaitez soumettre un texte ou une œuvre graphique, merci de l’envoyer au comité éditorial de la revue, avec une courte biographie et une éventuelle bibliographie, à l’adresse suivante :
         				</p>
+
 				        <address>
 				          <a href="mailto:cahiers.soniques@gmail.com"> <strong>cahiers.soniques@gmail.com</strong></a><br>
 				          ou<br>
-				          <strong>Association Les Cahiers soniques</strong><br>
-				          62, rue du faubourg Saint-Denis<br>
-				          75010 Paris<br>
-				        </address>	
+				          <strong>Les Cahiers soniques</strong><br>
+				          93, rue du Mont Cenis<br>
+				          75018 Paris<br>
+				        </address>
+				        <div id="social">
+							<a href="http://facebook.com/pages/Revue-Perroquet/286052698153430" rel="tooltip" title="Facebook" class="facebook">Facebook</a>
+						</div>		
 					</div>	
 					<!-- end: History -->
 
@@ -506,11 +515,11 @@
 					<h3>France</h3>
 					<div class="simple-list">
 					<ul>
-						<li>Librairie équipages - 61 rue de Bagnolet, Paris 20eme</li>
-						<li>Le Merle moqueur - 51 rue de Bagnolet, Paris 20eme</li>
-						<li>Vendredi - 67 rue des Martyrs, Paris 9eme</li>
-						<li>Aux livres, etc - 36 rue René Boulanger, Paris 10eme</li>
-						<li>Philippe le libraire - 32 rue des vinaigriers, Paris 10eme</li>
+						<li>Librairie équipages <sup>61 rue de Bagnolet, Paris 20e</sup></li>
+						<li>Le Merle moqueur <sup>51 rue de Bagnolet, Paris 20e</sup></li>
+						<li>Vendredi <sup>67 rue des Martyrs, Paris 9e</sup></li>
+						<li>Aux livres, etc <sup>36 rue René Boulanger, Paris 10e</sup></li>
+						<li>Philippe le libraire <sup>32 rue des vinaigriers, Paris 10e</sup></li>
 					</ul>
 					</div>
 				</div>
@@ -531,8 +540,8 @@
 					<h3>Belgique</h3>
 					<div class="simple-list">
 					<ul>
-						<li>Peinture Fraîche - 10 rue du Tabellion, Bruxelles</li>
-						<li>Ptyx - 39 rue lesbroussart, Bruxelles</li>
+						<li>Peinture Fraîche <sup>10 rue du Tabellion, Bruxelles</sup></li>
+						<li>Ptyx <sup>39 rue lesbroussart, Bruxelles</sup></li>
 					</ul>
 					</div>
 				</div>
@@ -564,40 +573,31 @@
 	<!-- end: 6th Page - Team -->
 	
 	<!-- start: 7th Page - Contact -->
-	<div id="mapBg"></div>
-	<div id="contact" class="color blue">
+	<div id="contact" class="color yellow">
 		
 		<!--start: Container -->
 		<div class="container">
 
 			<!--start: Wrapper -->
 			<div class="wrapper span12">
-
-				
-	
 			<!-- start: Page Title -->
 			<div id="page-title">
-
 				<div id="page-title-inner">
-
-						<h2><span>Contact</span></h2>
-
+					<h2><span>Contact</span></h2>
 				</div>	
-
 			</div>
 			<!-- end: Page Title -->
 			
 			<!-- start: Row -->
 			<div class="row-fluid">		
 				
-				<div class="span12">
+				<div class="span12" style="text-align: center;">
 					
 					<!-- start: Contact Info -->
 					<b>Les cahiers soniques</b> •
-					<b>62, rue du faubourg Saint-Denis
-					75010 Paris</b> •
-					<b>Email: cahiers.soniques@gmail.com</b> •
-					<b>Web: revueperroquet.com</b>	
+					<b>93, rue du Mont Cenis 75018 Paris</b> •
+					<b>Email: <a href="mailto:cahiers.soniques@gmail.com">cahiers.soniques@gmail.com</a></b> •
+					<b>Web: <a href="http://www.revueperroquet.com">www.revueperroquet.com</a></b>	
 					<!-- end: Contact Info -->
 				
 				</div>	
@@ -606,41 +606,6 @@
 			<!-- end: Row -->
 			
 			<hr class="clean">
-			
-			<!-- start: Row -->
-			<div class="row-fluid">		
-			
-				<!-- start: Contact -->
-				<div class="span12">
-					
-					<!-- start: Contact Form -->
-					<div id="contact-form">
-
-						<form method="post" action="">
-							
-							<fieldset>
-								
-								<input tabindex="4" id="name" name="name" type="text" value="" class="span12" placeholder="Name: ..." >
-								<input tabindex="2" id="email" name="email" type="text" value="" class="span12" placeholder="Email: ...">
-								<textarea tabindex="3" class="input-xlarge span12" id="message" name="body" rows="7" placeholder="Message: ..."></textarea>
-
-								<div class="actions">
-									<button tabindex="3" type="submit" class="btn btn-succes btn-large">Envoyer le message</button>
-								</div>
-								
-							</fieldset>
-
-						</form>
-
-					</div>
-					<!-- end: Contact Form -->
-					
-
-				</div>
-				<!-- end: Contact -->
-			
-			</div>
-			<!-- end: Row -->
 
 			</div>
 			<!-- end: Wrapper -->
@@ -788,11 +753,13 @@
 </script>
 <!-- Pour la liste des contributeurs-->
 <script type="text/javascript">
-	    	function switch_div(active_elem,disable_elem,active_link,disable_link) {
+	    	function switch_div(active_elem,disable_elem,active_link,disable_link,active_couv,disable_couv) {
 	    		document.getElementById(disable_elem).style.display = 'none';
 	    		document.getElementById(active_elem).style.display = 'block';
 	    		document.getElementById(disable_link).style.color = '#E0E0E0'
 	    		document.getElementById(active_link).style.color = 'black';
+	    		document.getElementById(disable_couv).style.display = 'none';
+	    		document.getElementById(active_couv).style.display = 'block';
 			}
 		</script>
 
@@ -802,7 +769,7 @@
 		function initializeMaps()
 		{
 		    var paris = new google.maps.LatLng(48.8566140, 2.3522219);
-		    var bruxelles = new google.maps.LatLng(50.8503396,4.3517103);
+		    var bruxelles = new google.maps.LatLng(50.8448057,4.3478128); 
 
 		    <!-- paris -->
 		    var lib_equipage = new google.maps.LatLng(48.8576036,2.3986112);
@@ -819,14 +786,26 @@
 		    {
 		        zoom: 12,
 		        center: paris,
-		        mapTypeId: google.maps.MapTypeId.ROADMAP
+		        mapTypeId: google.maps.MapTypeId.ROADMAP,
+		        draggable: false, 
+		        zoomControl: false, 
+		        scrollwheel: false, 
+		        disableDoubleClickZoom: true,
+		        mapTypeControl: false,
+		        streetViewControl: false
 		    };
 
 		    var options_bruxelles =
 		    {
 		        zoom: 12,
 		        center: bruxelles,
-		        mapTypeId: google.maps.MapTypeId.ROADMAP
+		        mapTypeId: google.maps.MapTypeId.ROADMAP,
+		        draggable: false, 
+		        zoomControl: false, 
+		        scrollwheel: false, 
+		        disableDoubleClickZoom: true,
+		        mapTypeControl: false,
+		        streetViewControl: false
 		    };
 
 		    var map = new google.maps.Map(document.getElementById("mapF"), options_paris,marker_paris);
@@ -867,6 +846,12 @@
 		    })];
 		}
 		</script>
+		<script type="text/javascript">
+		function setColorForNum0(){
+			document.getElementById("num0_link").style.color = 'black';
+		}
+		</script>
+		
 <!-- end: Java Script -->
 
 </body>

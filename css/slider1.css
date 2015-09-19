@@ -210,7 +210,7 @@
 	text-align: center;
 	line-height: 50px;
 	bottom: 50%;
-	margin: 0 0 -120px 0;
+	margin: 0 0 -30px 0;
 }
 
 .demo-1 .sl-slide blockquote {
@@ -272,16 +272,24 @@
 /* Second Slide */
 .demo-1 .bg-2 .sl-slide-inner,
 .demo-1 .bg-2 .sl-content-slice {
-	background-image: url('../img/background/herbe.jpg');
+	background-image: url('../img/background/background_salon_grey.jpg');
 	background-size: cover;
 }
 
+.demo-1 .bg-1 h2 {
+	font-size: 60px;
+	color: black;
+}
 .demo-1 .bg-2 [data-icon]:after,
 .demo-1 .bg-2 h2 {
 	color: #fff;
 }
 
 .demo-1 .bg-2 blockquote:before {
+	color: #222;
+}
+
+.demo-1 .bg-2 blockquote p{
 	color: #222;
 }
 
@@ -294,7 +302,7 @@
 /* Third Slide */
 .demo-1 .bg-3 .sl-slide-inner,
 .demo-1 .bg-3 .sl-content-slice {
-	background-image: url('../img/background/open_book.jpg');
+	background-image: url('../img/background/background_perroquet.jpg');
 	background-size: cover;
 }
 
