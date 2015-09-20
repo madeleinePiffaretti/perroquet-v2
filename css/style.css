@@ -956,7 +956,8 @@ html[xmlns] .slides {display: block;}
 	font-size: 12px;
 	font-weight: normal;
 	text-align: center;
-	color: #888;
+	color: #fff;
+	text-shadow: 0.5px 0.5px 0.5px  #C5C5C5, 0 0 0 #C5C5C5, 0.5px 0.5px 0.5px #C5C5C5;
 	margin-bottom: 10px;
 }
 
@@ -969,6 +970,49 @@ html[xmlns] .slides {display: block;}
 .img-contributeur{
 	padding: 10px;
     border-radius: 50%;
+}
+
+.round-title {
+	max-width: 180px;
+	min-width:180px;
+	display: inline-block;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+.round-title-circle {
+	width: 100%;
+	height:0;
+	padding-bottom: 90%;
+    border-radius: 50%;
+	border:10px solid #EFEFEF;
+    overflow:hidden;
+    background: #fff; 
+    box-shadow: 1px 0 2px RGBA(213, 213, 213, 1);
+}
+
+.round-title span{
+	vertical-align:middle;
+    width:100%;
+    display:inline-block;
+	line-height:1em;
+    padding-top:50%;
+	text-align:center;
+	color:#575757;
+    font-family:"Georgia" !important;
+    font-size:170%;
+    font-weight:bold;
+}
+
+.margin0-7em {
+	margin-top:-0.7em;
+}
+
+.margin0-5em {
+	margin-top:-0.5em;
+}
+
+.margin1-4em {
+	margin-top:-1.4em;
 }
 
 .max-h {
