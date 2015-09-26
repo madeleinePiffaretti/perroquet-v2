@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#tag {
+  color: #575757;
+  position: absolute;
+  display: none;
+  opacity: .85;
+  border-radius:2px;
+  border:1px solid #575757;
+  padding:3px 6px;
+}
+.svg-container {
+  overflow: visible;
+  padding-top: 50px;
+  position: relative;
+  text-align: center;
+  background: rgba( 255, 255, 255, 0.7);
+}
+.node {
+  cursor: pointer;
+}
+.edge {
+  fill: none;
+  stroke: #657b83;
+  stroke-width: .75px;
+}
