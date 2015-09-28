@@ -178,7 +178,7 @@
 						</a>
 					</div>
 				</div>	
-      			<div class="span5 list-icon" id='list-num0' style="padding-bottom:2em;">
+      			<div class="span5 list-icon" id='list-num0' style="display: none;padding-bottom:2em;">
 					<ul>
 						<li><a href='http://guillaumechauchat.com' target="_blank">Guillaume Chauchat <sup>dessin</sup></a></li>
 						<li><a href='#numeros'>Astrid Campion <sup>texte</sup></a></li>
@@ -201,7 +201,7 @@
 						<li><a href='#numeros'>Elodie Fiat <sup>son</sup></a></li>
               		</ul>
 				</div>	
-				<div class="span5 list-icon" id='list-num1' style="display: none; padding-bottom:2em;">
+				<div class="span5 list-icon" id='list-num1' style="padding-bottom:2em;">
 					<ul>
 						<li><a href='http://cargocollective.com/paulinebarzilai' target="_blank">Pauline Barzilai <sup>dessin</sup></a></li> 
 						<li><a href='#numeros'>Magali Brénon <sup>texte</sup></a></li> 
@@ -219,10 +219,10 @@
 						<li><a href='#numeros'>Sébastien Porte <sup>texte</sup></a></li> 
               		</ul>
 				</div>	
-				<div class="span5" id="couv1" style="display: none;">
+				<div class="span5" id="couv1">
 					<img src="img/numeros/n1/couverture.jpg">
 				</div>
-				<div class="span5" id="couv0">
+				<div class="span5" id="couv0" style="display: none;">
 					<img src="img/numeros/n0/couverture.jpg">
 				</div>		
         	
@@ -261,9 +261,19 @@
 
 			</div>		
 			<!-- start: Row -->
-			<div class="row-fluid">
+			<!--<div class="row-fluid">
 			 	<div class="svg-container">
  					<div id="tag"></div>
+				</div>
+			</div>-->
+			<div class="row-fluid">
+				<div class="span6" style="text-align:center;">
+					<h3><span>Numéros 0</span></h3>
+					<img src="img/num0_rencontres.png" />
+				</div>
+				<div class="span6" style="text-align:center;">
+					<h3><span>Numéros 1</span></h3>
+					<img src="img/num1_rencontres.png"/>
 				</div>
 			</div>
 			<!-- end: Table -->
@@ -739,7 +749,7 @@
 		</script>
 		<script type="text/javascript">
 		function setColorForNum0(){
-			document.getElementById("num0_link").style.color = 'black';
+			document.getElementById("num1_link").style.color = 'black';
 		}
 		</script>
 		
